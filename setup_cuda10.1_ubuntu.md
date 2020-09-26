@@ -66,7 +66,7 @@ Besides, there are many libraries compiled as deb file in the above url.
 Tips:
 Some libraries in cuda-10-1 require higher version than the libcublas you installed above.
 So you cannot update and install using `apt` or `apt-get` anymore. Otherwise, if you install the new-higher version, pytorch and tensorflow cannot recognize GPU device.
-To overcome this prob, a tip you can try is remove nvidia repo. It works in my case.
+To overcome this prob, a tip [2] you can try is remove nvidia repo. It works in my case.
 
 ```bash
 sudo rm /etc/apt/sources.list.d/cuda.list
@@ -110,4 +110,5 @@ except ImportError:
 ## References
 
 [1] https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130
+[2] https://askubuntu.com/questions/1132090/i-am-not-able-to-install-anything-in-ubuntu
 
