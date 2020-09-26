@@ -110,5 +110,6 @@ except ImportError:
 ## References
 
 [1] https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130
+
 [2] https://askubuntu.com/questions/1132090/i-am-not-able-to-install-anything-in-ubuntu
 
