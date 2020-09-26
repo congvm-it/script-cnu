@@ -63,6 +63,18 @@ I noticed that the `cuda-10-1` package does not have libcublas. To download this
 
 Besides, there are many libraries compiled as deb file in the above url. 
 
+Tips:
+Some libraries in cuda-10-1 require higher version than the libcublas you installed above.
+So you cannot update and install using `apt` or `apt-get` anymore. Otherwise, if you install the new-higher version, pytorch and tensorflow cannot recognize GPU device.
+To overcome this prob, a tip you can try is remove nvidia repo. It works in my case.
+
+```bash
+sudo rm /etc/apt/sources.list.d/cuda.list
+sudo apt-get clean
+sudo apt-get update
+sudo apt install -f
+```
+
 ## Testing
 
 To test whether tensorflow or torch recognizes GPU devices or not, you can use python script below.
